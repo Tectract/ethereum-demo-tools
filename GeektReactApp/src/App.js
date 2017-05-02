@@ -6,7 +6,9 @@ import cryptojs from 'crypto-js';
 // import fs from 'fs';
 
 var GeektABI = [{"constant":true,"inputs":[],"name":"getUsers","outputs":[{"name":"","type":"address[]"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"handle","type":"string"},{"name":"city","type":"bytes32"},{"name":"state","type":"bytes32"},{"name":"country","type":"bytes32"}],"name":"registerNewUser","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"SHA256notaryHash","type":"bytes32"}],"name":"getImage","outputs":[{"name":"","type":"string"},{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"userAddress","type":"address"}],"name":"getUser","outputs":[{"name":"","type":"string"},{"name":"","type":"bytes32"},{"name":"","type":"bytes32"},{"name":"","type":"bytes32"},{"name":"","type":"bytes32[]"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"getAllImages","outputs":[{"name":"","type":"bytes32[]"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"imageURL","type":"string"},{"name":"SHA256notaryHash","type":"bytes32"}],"name":"addImageToUser","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"badUser","type":"address"}],"name":"removeUser","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"badImage","type":"bytes32"}],"name":"removeImage","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"userAddress","type":"address"}],"name":"getUserImages","outputs":[{"name":"","type":"bytes32[]"}],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"}];
-var GeektAddress = '0xe70ff0fa937a25d5dd4172318fa1593baba5a027';
+//var GeektAddress = '0xe70ff0fa937a25d5dd4172318fa1593baba5a027';  // localhost testnet address
+var GeektAddress = '0x6f283ca1ea2a305662e25437f65aa9a52ae31c90';    // mainnet address!
+
 var GeektContract = {};
 var web3 = {};
 var alreadyLoaded = false;
@@ -790,7 +792,7 @@ class App extends Component {
               </td>
               <td style={{"width":"250px"}}>
                 See the BlockGeeks Article<br /><br />
-                See the Github Code Repository
+                See the <a href="https://github.com/Tectract/ethereum-demo-tools" target="_blank">Github Code Repository</a>
               </td></tr>
             </tbody>
           </table>
@@ -803,7 +805,6 @@ class App extends Component {
                 { this.drawUserSelect() }
               </td>
               <td style={{"width":"50%",}}>
-                Narrow By City
               </td>
             </tr>
             <tr className="bookMain">
@@ -822,6 +823,35 @@ class App extends Component {
             </tr>
           </tbody>
         </table>
+        <hr />
+        <span className="app-outro">
+          <table style={{"minWidth":"70%","textAlign":"left","margin":"auto"}}>
+            <tbody>
+              <tr><td style={{"textAlign":"center"}}>
+                <span style={{"fontSize":"15px","fontWeight":"bold"}}>
+                  Thank you for visiting <a href="http://www.soles.io/" target="_blank">SOLES.io</a> and the <a href="https://github.com/Tectract/ethereum-demo-tools" target="_blank">Ethereum Guestbook Demo</a>!<br /><br />
+                </span>
+              </td></tr>
+              <tr><td>
+                <span style={{"fontSize":"13px","fontWeight":"bold"}}>
+                  To use this tool you&#39;ll need a connection to an Ethereum network, via:<br />
+                  <span style={{"padding":"0px 0px 0px 6px"}}>
+                    1. start <a href="https://github.com/ethereum/go-ethereum" target="_blank">Ethereum server</a> or <a href="https://github.com/ethereumjs/testrpc" target="_blank">testrpc server</a> running at localhost:8545, then reload this page
+                  </span><br /><span style={{"padding":"0px 0px 0px 6px"}}>
+                    2. Install <a href="https://metamask.io/" target="_blank">Metamask plugin</a>, connect to network of your choice (including Mainnet!), then reload this page
+                  </span><br />
+                  <u>notes</u>: for localhost testrpc (testnet), you don&#39;t need Metamask running, see <a href="https://github.com/Tectract/EthDeployer/blob/master/README.md" target="_blank">the README</a> for metamask signing locally & ethereumjs-testrpc notes<br />
+                  <u>notes</u>: sometimes you may need to reload once or twice for it to see your web3.eth.accounts[0] account
+                  <br /><br />
+                  Author: <a href="http://www.soles.io/blog/our-team/" target="_blank">Ryan Molecke</a>, sponsored by <a href="http://blockgeeks.com/" target="_blank">BlockGeeks.com</a>!<br />
+                  Issues, comments, suggestions? Please use <a href="https://github.com/Tectract/ethereum-demo-tools/issues" target="_blank">this page</a> to start an issue ticket, do not email Ryan for help directly :)<br />
+                  Also check out <a href="http://www.soles.io/EthDeployer/" target="_blank">Tectract&#39;s EthDeployer!</a>
+                </span>
+              </td></tr>
+            </tbody>
+          </table>
+        </span>
+        <br /><br />
         </div>
       </div>
     );
