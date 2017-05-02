@@ -1,0 +1,12 @@
+{
+  "name": "ethereum-demo-tools",
+  "description": "Useful tool info and examples for learning to write Ethereum smart-contracts, to accompany my BlockGeeks article",
+  "dependencies": {
+    "truffle": "^3.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tectract/ethereum-demo-tools.git"
+  },
+  "author": "Ryan Molecke"
+}
