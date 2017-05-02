@@ -1,0 +1,75 @@
+html,
+body, #root {
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #06751A;
+  color: white;
+  text-align: center;
+  flex: 0 1 auto;
+  min-height: 210px;
+}
+
+.App-main {
+  height: calc(100% - 210px);
+  flex: 1 1 auto;
+}
+
+.bookTop {
+  height: 100px !important;
+  overflow: visible;
+}
+
+.bookMain {
+  height: calc(100% - 310px) !important;
+}
+
+h1 {
+  font-size: 46px;
+  text-decoration: underline;
+}
+
+h2 {
+  font-size: 38px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+.Button {
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  min-height: 32px;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: 0px;
+  color: rgb(255, 255, 255);
+  border-radius: 2px;
+  background-color: #06751A;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
