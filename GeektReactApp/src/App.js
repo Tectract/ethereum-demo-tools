@@ -135,7 +135,7 @@ class App extends Component {
         console.log("saw netId:" + netId);
         switch (netId) {
           case "1":
-            tempNetId = "mainnet";var sha256 = crypto.createHash('sha256').update('Apple').digest("hex");
+            tempNetId = "mainnet";
             console.log('This is mainnet');
             break
           case "2":
@@ -295,8 +295,12 @@ class App extends Component {
                       thisUser:userResult[0]
                     });
                   }
-                  outerThis.refs.userSelect.value = userResult[0];
-                  outerThis.refs.selectedUserImageRef.src = '';
+                  if(!!outerThis.refs.userSelect){
+                    outerThis.refs.userSelect.value = userResult[0];
+                  }
+                  if(!!outerThis.refs.selectedUserImageRef){
+                    outerThis.refs.selectedUserImageRef.src = '';
+                  }
                   outerThis.setState({
                     selectedUser:userResult[0],
                     selectedUserImages:{},

@@ -72,7 +72,7 @@ Geekt.then(function(instance){return instance.removeUser('0x0ac21f1a6fe22241ccd3
 
 ###app creation
 
-create-react-app GeektApp
+this app was created with: create-react-app (see: https://github.com/facebookincubator/create-react-app)
 
 this app uses a cors-anywhere proxy (deployed at heroku with a domain whitelist and rate-limit), to grab image data for sha256 hashing
 
@@ -80,8 +80,16 @@ see https://github.com/Rob--W/cors-anywhere for details on deploying a cors-anyw
 
 ### deployment info
 
-contract deployed on mainnet!
+to install the app locally
 
-txid: 0x94911e79d8e66c4928106c74d3f7e519eafc11bfb98ee8086758ff744e1cfbd4
+git clone https://www.github.com/tectract/ethereum-demo-tools/
 
-address: 0x71bb9d2426b496dd15fa0f76372a6ca3a8fd4ab0
+cd ethereum-demo-tools/GeekReactApp
+
+npm i
+
+npm start
+
+if testing against a localhost and local deployment of the contract, you'll have to update the contract address in App.js!
+
+otherwise just use metamask plugin and connect to mainnet to test the app, even if running locally :)
