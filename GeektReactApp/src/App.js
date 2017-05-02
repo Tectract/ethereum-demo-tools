@@ -844,7 +844,7 @@ class App extends Component {
                   </span><br /><span style={{"padding":"0px 0px 0px 6px"}}>
                     2. Install <a href="https://metamask.io/" target="_blank">Metamask plugin</a>, connect to network of your choice (including Mainnet!), then reload this page
                   </span><br />
-                  <u>notes</u>: for localhost testrpc (testnet), you don&#39;t need Metamask running, see <a href="https://github.com/Tectract/EthDeployer/blob/master/README.md" target="_blank">the README</a> for metamask signing locally & ethereumjs-testrpc notes<br />
+                  <u>notes</u>: for localhost testrpc (testnet), you don&#39;t need Metamask running, see <a href="https://github.com/Tectract/ethereum-demo-tools/blob/master/README.md" target="_blank">the README</a> for metamask signing locally & ethereumjs-testrpc notes<br />
                   <u>notes</u>: sometimes you may need to reload once or twice for it to see your web3.eth.accounts[0] account
                   <br /><br />
                   Author: <a href="http://www.soles.io/blog/our-team/" target="_blank">Ryan Molecke</a>, sponsored by <a href="http://blockgeeks.com/" target="_blank">BlockGeeks.com</a>!<br />
