@@ -787,8 +787,8 @@ class App extends Component {
             <tbody>
               <tr>
               <td style={{"width":"200px"}}>
-                <a href="http://www.soles.io/" target="_blank"><img src="http://www.soles.io/new_glowy_logo.png" alt="SOLES-Logo" width="160px"/></a><br />
-                <a href="http://www.soles.io/" target="_blank">SOLES.io</a>
+                <a href="http://www.enledger.io/" target="_blank"><img src="http://www.enledger.com/EnLedger_glowy_logo_200x200.png" alt="EnLedger-Logo" width="160px"/></a><br />
+                <a href="http://www.enledger.io/" target="_blank">EnLedger.io</a>
               </td>
               <td>
                 <a href="https://blockgeeks.com/" target="_blank"><img src="Blockgeeks-blue-black-white.png" alt="Blockgeeks-Logo" height="100px"/></a><br />
@@ -833,7 +833,7 @@ class App extends Component {
             <tbody>
               <tr><td style={{"textAlign":"center"}}>
                 <span style={{"fontSize":"15px","fontWeight":"bold"}}>
-                  Thank you for visiting <a href="http://www.soles.io/" target="_blank">SOLES.io</a> and the <a href="https://github.com/Tectract/ethereum-demo-tools" target="_blank">Ethereum Guestbook Demo</a>!<br /><br />
+                  Thank you for visiting <a href="http://www.enledger.io/" target="_blank">EnLedger.io</a> and the <a href="https://github.com/Tectract/ethereum-demo-tools" target="_blank">Ethereum Guestbook Demo</a>!<br /><br />
                 </span>
               </td></tr>
               <tr><td>
@@ -847,9 +847,9 @@ class App extends Component {
                   <u>notes</u>: for localhost testrpc (testnet), you don&#39;t need Metamask running, see <a href="https://github.com/Tectract/ethereum-demo-tools/blob/master/README.md" target="_blank">the README</a> for metamask signing locally & ethereumjs-testrpc notes<br />
                   <u>notes</u>: sometimes you may need to reload once or twice for it to see your web3.eth.accounts[0] account
                   <br /><br />
-                  Author: <a href="http://www.soles.io/blog/our-team/" target="_blank">Ryan Molecke</a>, sponsored by <a href="http://blockgeeks.com/" target="_blank">BlockGeeks.com</a>!<br />
+                  Author: <a href="http://www.enledger.io/blog/our-team/" target="_blank">Ryan Molecke</a>, sponsored by <a href="http://blockgeeks.com/" target="_blank">BlockGeeks.com</a>!<br />
                   Issues, comments, suggestions? Please use <a href="https://github.com/Tectract/ethereum-demo-tools/issues" target="_blank">this page</a> to start an issue ticket, do not email Ryan for help directly :)<br />
-                  Also check out <a href="http://www.soles.io/EthDeployer/" target="_blank">Tectract&#39;s EthDeployer!</a>
+                  Also check out <a href="http://www.enledger.io/EthDeployer/" target="_blank">Tectract&#39;s EthDeployer!</a>
                 </span>
               </td></tr>
             </tbody>
