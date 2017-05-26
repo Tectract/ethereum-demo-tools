@@ -772,10 +772,14 @@ class App extends Component {
   }
 
   componentDidMount() { // gets called every time a redraw occurs on the main top-level react elect (so, all the time)
+    var outerThis = this;
     if(!alreadyLoaded){ // we only want this to happen once upon page load, not every component reload...
       alreadyLoaded = true;
       loadWeb3();
-      this.getInfo();
+      setTimeout(function(){
+        // console.log("hello");
+        outerThis.getInfo();
+      }, 1000);
     }
   }
 

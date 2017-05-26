@@ -88,7 +88,9 @@ cd ethereum-demo-tools/GeekReactApp
 
 npm i
 
-npm start
+npm start 
+
+(or) npm run build 
 
 if testing against a localhost and local deployment of the contract, you'll have to update the contract address in App.js!
 
