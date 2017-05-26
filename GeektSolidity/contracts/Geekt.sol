@@ -24,7 +24,7 @@ contract Geekt {
     bytes32[] myImages;
   }
 
-  function Geekt() {  // this is the CONSTRUCTOR (same name as contract) it gets called ONCE only when contract is first deployed
+  function Geekt() payable {  // this is the CONSTRUCTOR (same name as contract) it gets called ONCE only when contract is first deployed
     GeektAdmin = msg.sender;  // just set the admin, so they can remove bad users or images if needed, but nobody else can
   }
 
