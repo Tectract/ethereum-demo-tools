@@ -349,7 +349,7 @@ class App extends Component {
                     if(Object.keys(newSelectedImages).length === length) {
                       outerThis.refs.userSelect.value = userResult[0];
                       outerThis.setState({
-                        users:usersList,
+                        // users:usersList,
                         selectedUser:userResult[0],
                         selectedUserImages:newSelectedImages,
                         selectedUserImage: selectLatestImage
@@ -382,6 +382,8 @@ class App extends Component {
 
   drawUserSelect(){ // draws the userSelect box and account links, in alphabetical order
     var outerThis = this;
+    console.log("drawing user select - ")
+    console.debug(this.state.users)
     return(
       <select id="userSelect" className="userSelect" ref="userSelect" style={{width:'300px'}} onChange={outerThis.newUserSelected}>
       <option disabled>Select user</option>
