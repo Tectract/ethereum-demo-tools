@@ -61,9 +61,9 @@ Geekt.then(function(instance){return JSON.stringify(instance.abi);})
 
 Geekt.then(function(instance){return instance.getUsers();})
 
-Geekt.then(function(instance){return instance.getImages();})
+Geekt.then(function(instance){return instance.getAllImages();})
 
-Geekt.then(function(instance){return instance.getImage('0x6c3e007e281f6948b37c511a11e43c8026d2a16a8a45fed4e83379b66b0ab927');})
+Geekt.then(function(instance){return instance.getUserImages('0x6c3e007e281f6948b37c511a11e43c8026d2a16a8a45fed4e83379b66b0ab927');})
 
 Geekt.then(function(instance){return instance.removeImage('0x6c3e007e281f6948b37c511a11e43c8026d2a16a8a45fed4e83379b66b0ab927');})
 
@@ -88,9 +88,9 @@ cd ethereum-demo-tools/GeekReactApp
 
 npm i
 
-npm start 
+npm start
 
-(or) npm run build 
+(or) npm run build
 
 if testing against a localhost and local deployment of the contract, you'll have to update the contract address in App.js!
 
