@@ -62,23 +62,27 @@ contract Geekt {
 
   function addImageToUser(string imageURL, bytes32 SHA256notaryHash) returns (bool success) {
     address thisNewAddress = msg.sender;
-    if(bytes(Users[thisNewAddress].handle).length != 0){ // make sure this user has created an account first
-      if(bytes(imageURL).length != 0){   // ) {  // couldn't get bytes32 null check to work, oh well!
-        // prevent users from fighting over sha->image listings in the whitepages, but still allow them to add a personal ref to any sha
-        if(bytes(notarizedImages[SHA256notaryHash].imageURL).length == 0) {
-          imagesByNotaryHash.push(SHA256notaryHash); // adds entry for this image to our image whitepages
-        }
-        notarizedImages[SHA256notaryHash].imageURL = imageURL;
-        notarizedImages[SHA256notaryHash].timeStamp = block.timestamp; // note that updating an image also updates the timestamp
-        Users[thisNewAddress].myImages.push(SHA256notaryHash); // add the image hash to this users .myImages array
-        return true;
-      } else {
-        return false; // either imageURL or SHA256notaryHash was null, couldn't store image
-      }
-      return true;
-    } else {
-      return false; // user didn't have an account yet, couldn't store image
+    // make sure this user has created an account first
+    if(bytes(Users[thisNewAddress].handle).length === 0){
+      // user didn't have an account yet, couldn't store image
+      return false;
+    } 
+    
+    //or we can add this line as or in first if
+    if(bytes(imageURL).length == 0){
+      return false; // either imageURL or SHA256notaryHash was null, couldn't store image   
+    }   
+    
+    // prevent users from fighting over sha->image listings in the whitepages, but still allow them to add a personal ref to any sha
+    if(bytes(notarizedImages[SHA256notaryHash].imageURL).length == 0) {
+      imagesByNotaryHash.push(SHA256notaryHash); // adds entry for this image to our image whitepages
     }
+    
+    notarizedImages[SHA256notaryHash].imageURL = imageURL;
+    notarizedImages[SHA256notaryHash].timeStamp = block.timestamp; // note that updating an image also updates the timestamp
+    Users[thisNewAddress].myImages.push(SHA256notaryHash); // add the image hash to this users .myImages array
+    
+    return true;
   }
 
   function getUsers() constant returns (address[]) { return usersByAddress; }
